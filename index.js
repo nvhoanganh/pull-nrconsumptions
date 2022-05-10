@@ -172,7 +172,7 @@ pullUsageForCustomers(accounts)
   .then(failedCount => {
     try {
       if (failedCount > 0) {
-        assert.fail(`Failed to sync ${failedCount} accounts. Update $secure.YOUR_NR_COOKIE`)
+        assert.fail(`Failed to sync ${failedCount} accounts`)
       } else {
         assert.ok('All accounts synced')
       }

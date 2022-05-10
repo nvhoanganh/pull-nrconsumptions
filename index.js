@@ -35,7 +35,7 @@ if (typeof $http === 'undefined') {
   var $http = require("request");
 
   var $secure = {};
-  INSERT_KEY = 'NRII-Km-UTr1W9u7PAaX8vCU1atZOtztVJ4LX'
+  INSERT_KEY = 'NRII-...'
 } else {
   // run in NR synthetic environment
   INSERT_KEY = $secure.YOUR_INSERT_KEY

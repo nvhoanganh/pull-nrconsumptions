@@ -1,6 +1,6 @@
 # Get New Relic usage from multiple accounts and push to NRDB as custom Metric
 
-This repo demo how you can use `New Relic Scripted API Synthetics` to pull New Relic Usage from multiple accounts.
+This repo show how you can use `New Relic Scripted API Synthetics` to pull New Relic Usage from multiple accounts.
 
 ## How does it work?
 

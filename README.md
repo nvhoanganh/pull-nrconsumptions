@@ -10,9 +10,15 @@ This is the script that will be executed against each account
 
 ```sql
 FROM NrConsumption, NrMTDConsumption SELECT
-filter(sum(GigabytesIngested), WHERE productLine = 'DataPlatform' AND eventType() = 'NrConsumption') as 'GigabytesIngested', 
-filter(latest(consumption), WHERE (metric = 'FullUsers' or metric = 'FullPlatformUsers') AND eventType() = 'NrMTDConsumption') AS 'FullUsers', 
-filter(latest(CoreUsersBillable), WHERE productLine = 'FullStackObservability' AND eventType() = 'NrMTDConsumption') AS 'CoreUsers' 
+filter(
+    sum(GigabytesIngested), 
+    WHERE productLine = 'DataPlatform' AND eventType() = 'NrConsumption') as 'GigabytesIngested', 
+filter(
+    latest(consumption), 
+    WHERE (metric = 'FullUsers' or metric = 'FullPlatformUsers') AND eventType() = 'NrMTDConsumption') AS 'FullUsers', 
+filter(
+    latest(CoreUsersBillable), 
+    WHERE productLine = 'FullStackObservability' AND eventType() = 'NrMTDConsumption') AS 'CoreUsers' 
 SINCE 1 days ago
 ```
 

@@ -26,13 +26,13 @@ Go to `New Relic One > Synthetics Monitors` and create the following `Secure cre
 
 -   Go to Synthetics and create new Scripted API Synthetics
 -   **Important**: Select `Node 10 (Legacy)` as run time
--   Select `1 hr` as frequency
+-   Select `1 day` as frequency (you don't want to run this more often than once a day)
 -   Select your location (only 1 location is required)
 -   Copy the content of the `index.js` file to the Script Editor
 -   Modify the following:
     -   `YOU_RPM_ACCOUNT`: all usage metrics will be pushed to this account
     -   `accounts`: list of all RPM accounts to run the NrConsumption query against in format `Customer_Name:RPM_Account_ID:UserApiKey`.
-    - Note: make sure you use the `correct` RPM_Account_ID and UserApiKey. The RPM_Account_ID must be the master account which contains FSO usage metrics and UserApiKey must be of the user who has access to that account.
+    - **Note**: make sure you use the `correct` RPM_Account_ID and UserApiKey. The RPM_Account_ID must be the master account which contains FSO usage metrics and UserApiKey must be of the user who has access to that account.
 -   Click Validate and Save script
 
 ## Troubleshooting Errors
